@@ -43,27 +43,27 @@ function daBears() {
 // Which function(s) access the "chair" variable and get "Too Big!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear"];
 
 // Which function(s) access the "feeling" variable and get "Hungry"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale2 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale2 = ["daBears", "goldilocks"];
 
 // Which function(s) access the "porridge" variable and get "Too Cold!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale3 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale3 = ["daBears", "papaBear", "mamaBear"];
 
 // Which function(s) access the "sleepy" variable and get undefined
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale4 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale4 = ["goldilocks"];
 
 // Which function(s) access the isFurry variable and get true
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear"];
 
 
 // *************
@@ -83,7 +83,20 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 // CODE HERE...
 
+class Vehicle(){
+	constructor(){
+		this.gasRemaining = 100;
+	}
+	drive(){
+			this.gasRemaining = this.gasRemaining function - 25;
+	}
+}
 
+var charger = new Vehicle();
+charger.drive();
+var mustang = new Vehicle();
+mustang.drive();
+mustang.drive();
 
 
 
@@ -106,8 +119,16 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 
 
-
 // CODE HERE...
+String.prototype.grammarPolice = new function(someString){
+	//make the first one caps
+	//someString[0] to caps ..
+	//loop through the remaining strings and make them small " start i from 1"
+	//for (var i = 1; i < someString.length; i++) {
+		//someString[i] to small 
+	//}
+	return someString;
+}
 
 
 
@@ -126,6 +147,18 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 // In all other cases, return "Different values"
 
 // CODE HERE...
+
+var valueType = function(a,b){
+	if(a === b){
+		return "Exactly the same";
+	}
+	// else if(type(a) != type(b)){
+		//return "same value, different types";
+	//}
+	else{
+		return "Different values";
+	}
+}
 
 // *************
 // * PROBLEM 5 *
@@ -152,7 +185,13 @@ function large() {
     return 'My name is ' + this.name + ' and I am very heavy!'
 }
   // CODE HERE...
-
+var someElephant = Object.Create(elephant);
+//maybe extend ?
+	//extend(someElephant,large);
+	//or call ?
+	//this.call(this,someElephant);
+	//maybe bind ?
+	//someElephant.bind(this.large);
 // *************
 // * PROBLEM 6 *
 // *************
@@ -164,7 +203,10 @@ function large() {
 // and return the bound function.
 
 // CODE HERE...
-
+var deathStar = function(capacity,crew){
+capacity.prototype.constructor = crew;
+return capacity();
+}
 
 // *************
 // * PROBLEM 7 *
@@ -178,3 +220,9 @@ function large() {
 // The closure function will return the combined value of assets and liabilities.
 
 // CODE HERE...
+var accountingOffice = function(assets (Number)){
+	var closure = function(liabilities (Number)){
+		return assets + liabilities;
+	}
+	return closure();
+}
